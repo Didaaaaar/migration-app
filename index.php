@@ -7,7 +7,7 @@
 <h1>Cloud Migration Lab</h1>
 <h2>Host: <?php echo gethostname(); ?></h2>
 <?php
-$db_host = getenv('DB_HOST') ?: 'localhost';
+$db_host = getenv('DB_HOST') ?: 'migration-lab.crayyaas4iwr.eu-north-1.rds.amazonaws.com';
 $db_name = getenv('DB_NAME') ?: 'migration_lab';
 $db_user = getenv('DB_USER') ?: 'root';
 $db_pass = getenv('DB_PASS') ?: 'Ohn368Xvc';
@@ -29,3 +29,4 @@ echo "<div style='color: red;'>❌ Database ERROR: " . $e->getMessage() . "</div
 ?>
 </body>
 </html>
+
