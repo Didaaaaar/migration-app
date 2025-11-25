@@ -7,9 +7,9 @@
 <h1>Cloud Migration Lab</h1>
 <h2>Host: <?php echo gethostname(); ?></h2>
 <?php
-$db_host = getenv('DB_HOST') ?: 'migration-lab.crayyaas4iwr.eu-north-1.rds.amazonaws.com';
+$db_host = getenv('DB_HOST') ?: 'migration-lab.cleims224bfv.eu-central-1.rds.amazonaws.com';
 $db_name = getenv('DB_NAME') ?: 'migration_lab';
-$db_user = getenv('DB_USER') ?: 'root';
+$db_user = getenv('DB_USER') ?: 'admin';
 $db_pass = getenv('DB_PASS') ?: 'Ohn368Xvc';
 try {
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
@@ -29,4 +29,5 @@ echo "<div style='color: red;'>❌ Database ERROR: " . $e->getMessage() . "</div
 ?>
 </body>
 </html>
+
 
